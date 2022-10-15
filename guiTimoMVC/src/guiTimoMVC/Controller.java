@@ -1,19 +1,13 @@
 package guiTimoMVC;
 
 import java.awt.Color;
-import java.awt.Component.BaselineResizeBehavior;
 import java.awt.Cursor;
 import java.awt.Image;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class Controller {
@@ -87,17 +81,14 @@ public class Controller {
 			});
 	}
 	
-	  public ImageIcon resize(String imgPath)
-	  {
+	// Methode, um das Bild auf die Groesse des Labels zu bringen
+	public ImageIcon resize(String imgPath) {
 	    ImageIcon path = new ImageIcon(imgPath);
 	    Image img = path.getImage();
 	    Image newImg = img.getScaledInstance(view.getImage().getWidth(), view.getImage().getHeight(), Image.SCALE_SMOOTH);
 	    ImageIcon image = new ImageIcon(newImg);
 	    return image;
-	  }
-	
-	public String getImagePath() {
-		return path;
 	}
+	
 	
 }

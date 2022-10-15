@@ -268,6 +268,8 @@ public class View extends JFrame {
         getContentPane().add(tabpane);
 	}
 	
+	// Methoden, um im Controller gebrauchte Komponenten nach aussen sichtbar zu machen
+	
 	public Component getPanelSimple() {
 		return panelSimple;
 	}
